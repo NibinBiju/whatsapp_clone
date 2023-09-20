@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
+import 'package:whatsapp_status_page/views/status_page/text_status.dart';
 
 class EditFloatingButton extends StatelessWidget {
   const EditFloatingButton({
@@ -21,7 +22,13 @@ class EditFloatingButton extends StatelessWidget {
             mini: true,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return StatusText();
+                },
+              ));
+            },
             child: Icon(
               Icons.edit,
               color: ColorsConstant.primaryColor,
