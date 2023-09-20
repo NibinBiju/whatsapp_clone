@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:whatsapp_status_page/colors/colors_constants.dart';
+
+class EditFloatingButton extends StatelessWidget {
+  const EditFloatingButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 560,
+            right: 21,
+          ),
+          child: FloatingActionButton(
+            backgroundColor: Colors.teal.shade100,
+            mini: true,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            onPressed: () {},
+            child: Icon(
+              Icons.edit,
+              color: ColorsConstant.primaryColor,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
