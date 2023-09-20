@@ -3,7 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
 import 'package:whatsapp_status_page/views/calls_page/calls_page.dart';
 import 'package:whatsapp_status_page/views/primary_page/home/home.dart';
-import 'package:whatsapp_status_page/views/status_page/status_page.dart';
+import 'package:whatsapp_status_page/views/primary_page/status_page/status_page.dart';
 
 class PrimaryPage extends StatelessWidget {
   PrimaryPage({super.key});

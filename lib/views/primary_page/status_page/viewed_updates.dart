@@ -1,7 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_status_page/views/status_page/tile_sub_text.dart';
-import 'package:whatsapp_status_page/views/status_page/tile_text.dart';
+import 'package:whatsapp_status_page/views/primary_page/status_page/tile_sub_text.dart';
+import 'package:whatsapp_status_page/views/primary_page/status_page/tile_text.dart';
 
 class ViewedUpdates extends StatelessWidget {
   const ViewedUpdates({
