@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
 
-class StatusText extends StatelessWidget {
+class StatusText extends StatefulWidget {
   const StatusText({super.key});
+
+  @override
+  State<StatusText> createState() => _StatusTextState();
+}
+
+class _StatusTextState extends State<StatusText> {
+  bool changeColo = false;
+  List colors = [
+    Colors.yellow.shade300,
+    Colors.red.shade300,
+    Colors.blue.shade300,
+    Colors.deepPurple.shade300,
+    Colors.teal.shade300,
+  ];
+
+  final int index = 4;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade400,
+      backgroundColor: changeColo ? Colors.green.shade400 : Colors.red.shade300,
       body: Column(
         children: [
           Padding(
@@ -18,7 +34,7 @@ class StatusText extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.close,
                     color: Colors.white,
                     size: 32,
@@ -28,27 +44,31 @@ class StatusText extends StatelessWidget {
                   children: [
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.emoji_emotions_rounded,
                           color: Colors.white,
                           size: 30,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       'T',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
                           fontWeight: FontWeight.w500),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     IconButton(
-                        onPressed: () {},
-                        icon: Icon(
+                        onPressed: () {
+                          setState(() {
+                            changeColo = !changeColo;
+                          });
+                        },
+                        icon: const Icon(
                           Icons.color_lens,
                           size: 30,
                           color: Colors.white,
@@ -57,7 +77,27 @@ class StatusText extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 260, left: 30, right: 30),
+            child: TextField(
+              style: TextStyle(
+                fontSize: 34,
+              ),
+              cursorHeight: 50,
+              cursorWidth: 3,
+              cursorColor: Colors.white,
+              decoration: InputDecoration(
+                hintText: 'Type a status',
+                hintStyle: TextStyle(
+                  fontSize: 32,
+                  color: Colors.white24,
+                ),
+                border: InputBorder.none,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );
