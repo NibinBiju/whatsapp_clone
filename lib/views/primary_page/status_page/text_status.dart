@@ -9,6 +9,7 @@ class StatusText extends StatefulWidget {
 
 class _StatusTextState extends State<StatusText> {
   bool changeColo = false;
+  bool hideText = true;
   List colors = [
     Colors.yellow.shade300,
     Colors.red.shade300,
@@ -78,16 +79,22 @@ class _StatusTextState extends State<StatusText> {
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 260, left: 30, right: 30),
+          Padding(
+            padding: const EdgeInsets.only(top: 260, left: 30, right: 30),
             child: TextField(
-              style: TextStyle(
+              autofocus: true,
+              onTap: () {
+                setState(() {
+                  hideText = !hideText;
+                });
+              },
+              style: const TextStyle(
                 fontSize: 34,
               ),
               cursorHeight: 50,
               cursorWidth: 3,
               cursorColor: Colors.white,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Type a status',
                 hintStyle: TextStyle(
                   fontSize: 32,
