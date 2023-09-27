@@ -4,7 +4,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
 import 'package:whatsapp_status_page/database/db_model.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view.dart';
+import 'package:whatsapp_status_page/views/primary_page/status_page/recent_updates.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/tile_sub_text.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/tile_text.dart';
 
@@ -24,7 +24,9 @@ class NewStatus extends StatelessWidget {
         onTap: () {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return StatusView();
+              return StatusView(
+                profileImage: statusDb.imagepath,
+              );
             },
           ));
         },

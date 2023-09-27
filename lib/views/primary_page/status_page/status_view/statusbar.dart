@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/status_progress_bar.dart';
 

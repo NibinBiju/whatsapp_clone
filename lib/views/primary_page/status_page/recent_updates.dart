@@ -1,13 +1,14 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:whatsapp_status_page/database/db_model.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status1.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status2.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status3.dart';
 import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/statusbar.dart';
 
 class StatusView extends StatefulWidget {
-  const StatusView({super.key});
+  StatusView({super.key, required this.profileImage});
+  final String profileImage;
 
   @override
   State<StatusView> createState() => _StatusViewState();
@@ -18,7 +19,7 @@ class _StatusViewState extends State<StatusView> {
   final List myStatus = [
     const MyStatus1(),
     const MyStatus2(),
-    const MyStatus3(),
+    MyStatus3(),
   ];
 
   List<double> percentWatched = [];
@@ -40,8 +41,7 @@ class _StatusViewState extends State<StatusView> {
         } else {
           percentWatched[currentStatusIndex] = 1;
           timer.cancel();
-
-          if (currentStatusIndex < myStatus.length) {
+          if (currentStatusIndex < myStatus.length - 1) {
             currentStatusIndex++;
             _startWatching();
           } else {

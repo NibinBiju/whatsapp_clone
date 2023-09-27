@@ -31,7 +31,7 @@ class ViewedUpdates extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           child: ListView.builder(
             itemCount: 2,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.only(right: 0),
@@ -44,18 +44,19 @@ class ViewedUpdates extends StatelessWidget {
                       radius: const Radius.circular(27),
                       // dashPattern: const [(2 * pi * 27) / 20],
                       strokeWidth: 3,
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 32,
                         backgroundColor: Colors.transparent,
                         child: CircleAvatar(
+                          backgroundColor: Colors.transparent,
                           radius: 25,
                           backgroundImage:
                               AssetImage('assets/images/profile no2.jpeg'),
                         ),
                       ),
                     ),
-                    title: TileText(text: 'Mac'),
-                    subtitle: TileSubText(subText: 'Today 9.43 pm'),
+                    title: const TileText(text: 'Mac'),
+                    subtitle: const TileSubText(subText: 'Today 9.43 pm'),
                   ),
                 ),
               );
