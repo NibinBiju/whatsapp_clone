@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
 import 'package:whatsapp_status_page/database/db_model.dart';
-import 'package:whatsapp_status_page/views/primary_page/primary_page.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/edit_floating_button.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/my_status_tile.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/new_status.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/viewed_updates.dart';
+import 'package:whatsapp_status_page/views/privacy_page/primary_page.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/edit_floating_button.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/my_status_tile.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/new_status.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/viewed_updates.dart';
 
 class StatusPage extends StatelessWidget {
   const StatusPage({super.key});

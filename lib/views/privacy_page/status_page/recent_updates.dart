@@ -1,14 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/database/db_model.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status1.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status2.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/my_status3.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/statusbar.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status1.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status2.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status3.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/statusbar.dart';
 
 class StatusView extends StatefulWidget {
-  StatusView({super.key, required this.profileImage});
-  final String profileImage;
+  StatusView({super.key});
 
   @override
   State<StatusView> createState() => _StatusViewState();
@@ -16,10 +15,11 @@ class StatusView extends StatefulWidget {
 
 class _StatusViewState extends State<StatusView> {
   int currentStatusIndex = 0;
+
   final List myStatus = [
     const MyStatus1(),
     const MyStatus2(),
-    MyStatus3(),
+    const MyStatus3(),
   ];
 
   List<double> percentWatched = [];
@@ -27,6 +27,7 @@ class _StatusViewState extends State<StatusView> {
   @override
   void initState() {
     super.initState();
+
     for (int i = 0; i < myStatus.length; i++) {
       percentWatched.add(0);
     }

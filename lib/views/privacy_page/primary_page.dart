@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
 import 'package:whatsapp_status_page/views/calls_page/calls_page.dart';
-import 'package:whatsapp_status_page/views/primary_page/home/home.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_page.dart';
+import 'package:whatsapp_status_page/views/privacy_page/home/home.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_page.dart';
+import 'package:whatsapp_status_page/views/status_privacy/status_privacy.dart';
 
 class PrimaryPage extends StatelessWidget {
   PrimaryPage({super.key});
@@ -44,7 +45,14 @@ class PrimaryPage extends StatelessWidget {
             ),
             PopupMenuButton(
               itemBuilder: (context) => [
-                const PopupMenuItem(
+                PopupMenuItem(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StatusPrivacy();
+                      },
+                    ));
+                  },
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   value: 'status privacy',
                   child: Text('Status privacy'),

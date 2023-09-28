@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
-import 'package:whatsapp_status_page/views/primary_page/primary_page.dart';
+import 'package:whatsapp_status_page/views/privacy_page/primary_page.dart';
 
 void main() {
   runApp(const MyApp());

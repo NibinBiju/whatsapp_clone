@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/status_view/status_progress_bar.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/status_progress_bar.dart';
 
 class Statusbar extends StatelessWidget {
   Statusbar({super.key, required this.percentWatch});

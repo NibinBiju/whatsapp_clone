@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/tile_sub_text.dart';
-import 'package:whatsapp_status_page/views/primary_page/status_page/tile_text.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/tile_sub_text.dart';
+import 'package:whatsapp_status_page/views/privacy_page/status_page/tile_text.dart';
 
 class MyStatusTile extends StatelessWidget {
   MyStatusTile({

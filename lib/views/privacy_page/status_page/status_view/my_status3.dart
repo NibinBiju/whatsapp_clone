@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_status_page/database/db_model.dart';
 
 class MyStatus3 extends StatelessWidget {
-  const MyStatus3({super.key});
+  const MyStatus3({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +34,7 @@ class MyStatus3 extends StatelessWidget {
                       ),
                     ],
                   ),
-                  title: const Text(
+                  title: Text(
                     'name',
                     style: TextStyle(
                       color: Colors.white,
