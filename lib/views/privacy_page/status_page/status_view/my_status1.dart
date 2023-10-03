@@ -26,8 +26,10 @@ class MyStatus1 extends StatelessWidget {
                             Icons.arrow_back,
                             color: Colors.white,
                           )),
-                      const CircleAvatar(
+                      CircleAvatar(
                         radius: 30,
+                        backgroundImage:
+                            AssetImage('assets/images/profile no3.jpeg'),
                       ),
                     ],
                   ),

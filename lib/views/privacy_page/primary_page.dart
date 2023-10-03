@@ -9,7 +9,8 @@ import 'package:whatsapp_status_page/views/status_privacy/status_privacy.dart';
 class PrimaryPage extends StatelessWidget {
   PrimaryPage({super.key});
 
-  // @override
+  static ValueNotifier<int> selectedIndex = ValueNotifier(0);
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -49,13 +50,13 @@ class PrimaryPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
-                        return StatusPrivacy();
+                        return const StatusPrivacy();
                       },
                     ));
                   },
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   value: 'status privacy',
-                  child: Text('Status privacy'),
+                  child: const Text('Status privacy'),
                 ),
                 const PopupMenuItem(
                   value: 'settings',
