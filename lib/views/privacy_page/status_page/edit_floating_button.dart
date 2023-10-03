@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
-import 'package:whatsapp_status_page/views/privacy_page/status_page/text_status.dart';
+import 'package:whatsapp_status_page/views/text_status/text_status.dart';
 
 class EditFloatingButton extends StatelessWidget {
   const EditFloatingButton({
