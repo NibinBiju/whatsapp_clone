@@ -7,7 +7,7 @@ import 'package:whatsapp_status_page/views/privacy_page/status_page/status_page.
 import 'package:whatsapp_status_page/views/status_privacy/status_privacy.dart';
 
 class PrimaryPage extends StatelessWidget {
-  PrimaryPage({super.key});
+  const PrimaryPage({super.key});
 
   static ValueNotifier<int> selectedIndex = ValueNotifier(0);
 

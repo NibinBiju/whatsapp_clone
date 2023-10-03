@@ -23,7 +23,7 @@ class NewStatus extends StatelessWidget {
         onTap: () {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return StatusView();
+              return const StatusView();
             },
           ));
         },

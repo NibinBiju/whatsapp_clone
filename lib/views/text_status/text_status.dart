@@ -8,7 +8,8 @@ class StatusText extends StatefulWidget {
 }
 
 class _StatusTextState extends State<StatusText> {
-  bool changeColo = false;
+  Color backgroundColors = Colors.green;
+
   bool hideText = true;
   List colors = [
     Colors.yellow.shade300,
@@ -18,12 +19,19 @@ class _StatusTextState extends State<StatusText> {
     Colors.teal.shade300,
   ];
 
-  final int index = 4;
+  int currentindex = 0;
+
+  void changeBackgroundColor() {
+    setState(() {
+      backgroundColors = colors[currentindex];
+      currentindex = (currentindex + 1) % colors.length;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: changeColo ? Colors.green.shade400 : Colors.red.shade300,
+      backgroundColor: backgroundColors,
       body: Column(
         children: [
           Padding(
@@ -65,9 +73,7 @@ class _StatusTextState extends State<StatusText> {
                     ),
                     IconButton(
                         onPressed: () {
-                          setState(() {
-                            changeColo = !changeColo;
-                          });
+                          changeBackgroundColor();
                         },
                         icon: const Icon(
                           Icons.color_lens,
@@ -89,6 +95,7 @@ class _StatusTextState extends State<StatusText> {
                 });
               },
               style: const TextStyle(
+                color: Colors.white,
                 fontSize: 34,
               ),
               cursorHeight: 50,
@@ -106,6 +113,22 @@ class _StatusTextState extends State<StatusText> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: 60,
+        color: Colors.black45,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'assets/images/PngItem_1499104.png',
+              height: 40,
+            ),
+            const SizedBox(
+              width: 10,
+            )
+          ],
+        ),
       ),
     );
   }
