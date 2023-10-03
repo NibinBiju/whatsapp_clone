@@ -42,7 +42,6 @@ class ViewedUpdates extends StatelessWidget {
                       color: Colors.grey,
                       borderType: BorderType.Circle,
                       radius: const Radius.circular(27),
-                      // dashPattern: const [(2 * pi * 27) / 20],
                       strokeWidth: 3,
                       child: const CircleAvatar(
                         radius: 32,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_status_page/colors/colors_constants.dart';
-import 'package:whatsapp_status_page/views/privacy_page/status_page/tile_text.dart';
 
 enum PrivacyOption {
   myContacts,
@@ -108,6 +107,17 @@ class _StatusPrivacyState extends State<StatusPrivacy> {
                     _option = value;
                   });
                 },
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20, left: 20, bottom: 8),
+            child: Text(
+              "Changes to your privacy settings won't affect status updates that you've sent already",
+              style: TextStyle(
+                color: Colors.grey.shade700,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),

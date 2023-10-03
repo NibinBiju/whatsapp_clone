@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_status_page/database/db_model.dart';
 
 class MyStatus3 extends StatelessWidget {
   const MyStatus3({
@@ -29,12 +28,12 @@ class MyStatus3 extends StatelessWidget {
                             Icons.arrow_back,
                             color: Colors.white,
                           )),
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 30,
                       ),
                     ],
                   ),
-                  title: Text(
+                  title: const Text(
                     'name',
                     style: TextStyle(
                       color: Colors.white,

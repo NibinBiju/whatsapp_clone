@@ -1,13 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_status_page/database/db_model.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status1.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status2.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/my_status3.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/status_view/statusbar.dart';
 
 class StatusView extends StatefulWidget {
-  StatusView({super.key});
+  const StatusView({super.key});
 
   @override
   State<StatusView> createState() => _StatusViewState();
