@@ -8,9 +8,17 @@ class MyStatus3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-      body: Column(
+      backgroundColor: Colors.black,
+      body: Stack(
         children: [
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Image.network(
+              'https://i.pinimg.com/236x/3d/71/55/3d7155ba28732516672822e557cba15f.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
           Container(
               color: Colors.black,
               height: 130,
@@ -30,6 +38,8 @@ class MyStatus3 extends StatelessWidget {
                           )),
                       const CircleAvatar(
                         radius: 30,
+                        backgroundImage:
+                            AssetImage('assets/images/profile no3.jpeg'),
                       ),
                     ],
                   ),

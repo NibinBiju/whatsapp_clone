@@ -6,7 +6,6 @@ import 'package:whatsapp_status_page/views/privacy_page/status_page/edit_floatin
 import 'package:whatsapp_status_page/views/privacy_page/status_page/my_status_tile.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/new_status.dart';
 import 'package:whatsapp_status_page/views/privacy_page/status_page/viewed_updates.dart';
-import 'package:whatsapp_status_page/views/status_privacy/status_privacy.dart';
 
 class StatusPage extends StatelessWidget {
   const StatusPage({super.key});
