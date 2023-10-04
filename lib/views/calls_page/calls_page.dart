@@ -14,7 +14,7 @@ class CallsPage extends StatelessWidget {
           ),
           ListTile(
             leading: CircleAvatar(
-              radius: 29,
+              radius: 25,
               backgroundColor: ColorsConstant.primaryColor,
               child: const Center(
                 child: Icon(
@@ -53,8 +53,48 @@ class CallsPage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          ListTile(
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile no1.jpeg'),
+              radius: 25,
+            ),
+            title: const Text(
+              'John',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            subtitle: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.arrow_outward_outlined,
+                  color: ColorsConstant.primaryColor,
+                ),
+                const Text('30 September,11:37 pm')
+              ],
+            ),
+            trailing: Icon(
+              Icons.video_call,
+              color: ColorsConstant.primaryColor,
+              size: 32,
+            ),
+          )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          backgroundColor: ColorsConstant.primaryColor,
+          onPressed: () {},
+          child: Icon(
+            Icons.call,
+            color: Colors.white,
+          )),
     );
   }
 }
